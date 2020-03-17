@@ -19,8 +19,8 @@ public class Character : MonoBehaviour
     public float turnSpeed = 0.3f;
 
     private Animator anim;
-    public CameraHandler cameraHandler;
-
+    public CameraControl cameraControl;
+    
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -43,7 +43,7 @@ public class Character : MonoBehaviour
 
 
             //相机的正方向
-            Vector3 cameraForword = cameraHandler.transform.TransformDirection(new Vector3(HorizontalVal, 0, VerticalVal));
+            Vector3 cameraForword = cameraControl.transform.TransformDirection(new Vector3(HorizontalVal, 0, VerticalVal));
             //旋转面向
             transform.forward  =Vector3.Slerp(transform.forward, cameraForword, turnSpeed);
             //不旋转xz，只旋转y
