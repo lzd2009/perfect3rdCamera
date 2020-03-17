@@ -1,0 +1,1 @@
+![show](https://github.com/lzd2009/perfect3rdCamera/raw/master/showImage/show.gif)
